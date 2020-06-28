@@ -51,24 +51,42 @@
 
 // Template String
 
-const nombre = 'Eraldo';
-const trabajo = 'Desarrollador Web';
+// const nombre = 'Eraldo';
+// const trabajo = 'Desarrollador Web';
 
-// concatenar javascript
-console.log('Nombre: ' + nombre + ', trabajo: ' + trabajo);
-console.log(`Nombre: ${nombre}, trabajo: ${trabajo}`);
+// // concatenar javascript
+// console.log('Nombre: ' + nombre + ', trabajo: ' + trabajo);
+// console.log(`Nombre: ${nombre}, trabajo: ${trabajo}`);
 
-// concatenar con multiples lineas
-const contenedorApp = document.querySelector('#app');
+// // concatenar con multiples lineas
+// const contenedorApp = document.querySelector('#app');
 // let html = '<ul>' +
 //                '<li> Nombre: ' + nombre + '</li>' +
 //                '<li> Trabajo: ' + trabajo + '</li>' +
 //            '</ul>';
 
-let html = `
-               <ul>
-                    <li>Nombre: ${nombre} </li>
-                    <li>Trabajo: ${trabajo} </li>
-               </ul>
-          `;
-contenedorApp.innerHTML = html;
+// let html = `
+//                <ul>
+//                     <li>Nombre: ${nombre} </li>
+//                     <li>Trabajo: ${trabajo} </li>
+//                </ul>
+//           `;
+// contenedorApp.innerHTML = html;
+
+// creando una funcion
+
+// Function Declaration
+
+// function saludar(nombre) {
+//      console.log('Bienvenido ' + nombre);
+// }
+
+// saludar('Eraldo');
+
+// Function expression
+
+const cliente = function(nombreCliente) {
+     console.log('Mostrando datos del cliente: ' + nombreCliente);
+}
+
+cliente('Eraldo');

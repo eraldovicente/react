@@ -85,8 +85,22 @@
 
 // Function expression
 
-const cliente = function(nombreCliente) {
-     console.log('Mostrando datos del cliente: ' + nombreCliente);
-}
+// const cliente = function(nombreCliente) {
+//      console.log('Mostrando datos del cliente: ' + nombreCliente);
+// }
 
-cliente('Eraldo');
+// cliente('Eraldo');
+
+// Parametros por default en las funciones
+// function actividad(nombre = 'Walter White', actividad = 'Ensenãr Quimica') {
+//      console.log(`La persona ${nombre}, esta realizando la actividad ${actividad}`);
+// }
+
+const actividad = function(nombre = 'Walter White', actividad = 'Enseñar Quimica') {
+     console.log(`La persona ${nombre}, esta realizando la actividad ${actividad}`);
+};
+
+actividad('Eraldo', 'Aprender JavaScript');
+actividad('Gabriel cabecao', 'Creando un sito web');
+actividad();
+

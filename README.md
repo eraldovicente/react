@@ -1,2 +1,2 @@
 # react
-Curso React
+Curso React - La guía completa: Hooks Context Redux MERN

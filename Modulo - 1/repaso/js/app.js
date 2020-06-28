@@ -41,10 +41,34 @@
 // }
 // console.log('Fuera del IF', musica);
 
-const musica = 'Rock';
+// const musica = 'Rock';
 
-if (musica) {
-     const musica = 'Grunge';
-     console.log('dentro del if: ', musica);
-}
-console.log('Fuera del IF', musica);
+// if (musica) {
+//      const musica = 'Grunge';
+//      console.log('dentro del if: ', musica);
+// }
+// console.log('Fuera del IF', musica);
+
+// Template String
+
+const nombre = 'Eraldo';
+const trabajo = 'Desarrollador Web';
+
+// concatenar javascript
+console.log('Nombre: ' + nombre + ', trabajo: ' + trabajo);
+console.log(`Nombre: ${nombre}, trabajo: ${trabajo}`);
+
+// concatenar con multiples lineas
+const contenedorApp = document.querySelector('#app');
+// let html = '<ul>' +
+//                '<li> Nombre: ' + nombre + '</li>' +
+//                '<li> Trabajo: ' + trabajo + '</li>' +
+//            '</ul>';
+
+let html = `
+               <ul>
+                    <li>Nombre: ${nombre} </li>
+                    <li>Trabajo: ${trabajo} </li>
+               </ul>
+          `;
+contenedorApp.innerHTML = html;

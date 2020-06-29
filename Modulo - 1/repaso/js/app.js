@@ -125,11 +125,14 @@
 
 // Object Literal
 
-// const persona = {
-//      nombre: 'Eraldo',
-//      profesion: 'Desarrollador Web',
-//      edad: 500
-// } 
+const persona = {
+     nombre: 'Eraldo',
+     profesion: 'Desarrollador Web',
+     edad: 500
+} 
+
+// const mostrarCliente = mostrarInformacionTarea(persona.nombre, persona.profesion);
+// console.log(mostrarCliente);
 
 // console.log(persona);
 // console.log(persona.nombre);
@@ -137,10 +140,21 @@
 // console.log(persona.edad);
 // console.log(persona['edad']);
 
+// Prototype
+
+// function mostrarInformacionTarea(tarea, prioridad) {
+//      return `La tarea ${tarea} tiene una prioridad de ${prioridad}`;
+// }
+
 // Object Constructor
 function Tarea(nombre, urgencia) {
      this.nombre = nombre;
      this.urgencia = urgencia;
+}
+
+// Agregar un prototype
+Tarea.prototype.mostrarInformacionTarea = function() {
+     return `La tarea ${this.nombre} tiene una prioridad de ${this.urgencia}`;
 }
 
 // Crear una nueva tareas
@@ -150,11 +164,11 @@ function Tarea(nombre, urgencia) {
 
 // crear multiples tareas
 const tarea1 = new Tarea('Apreder JavaScript y React', 'Urgente');
-const tarea2 = new Tarea('Preparar café', 'Urgente');
-const tarea3 = new Tarea('Comer', 'Urgente');
-const tarea4 = new Tarea('estudiar', 'Urgente');
+console.log(tarea1.mostrarInformacionTarea() );
+// const tarea2 = new Tarea('Preparar café', 'Urgente');
+// const tarea3 = new Tarea('Comer', 'Urgente');
+// const tarea4 = new Tarea('estudiar', 'Urgente');
 
-console.log(tarea1);
-console.log(tarea2);
-console.log(tarea3);
-console.log(tarea4);
+// const mostrarInfo = mostrarInformacionTarea(tarea1.nombre, tarea1.urgencia);
+// console.log(mostrarInfo);
+

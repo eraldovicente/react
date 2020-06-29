@@ -125,11 +125,11 @@
 
 // Object Literal
 
-const persona = {
-     nombre: 'Eraldo',
-     profesion: 'Desarrollador Web',
-     edad: 500
-} 
+// const persona = {
+//      nombre: 'Eraldo',
+//      profesion: 'Desarrollador Web',
+//      edad: 500
+// } 
 
 // const mostrarCliente = mostrarInformacionTarea(persona.nombre, persona.profesion);
 // console.log(mostrarCliente);
@@ -147,15 +147,15 @@ const persona = {
 // }
 
 // Object Constructor
-function Tarea(nombre, urgencia) {
-     this.nombre = nombre;
-     this.urgencia = urgencia;
-}
+// function Tarea(nombre, urgencia) {
+//      this.nombre = nombre;
+//      this.urgencia = urgencia;
+// }
 
-// Agregar un prototype
-Tarea.prototype.mostrarInformacionTarea = function() {
-     return `La tarea ${this.nombre} tiene una prioridad de ${this.urgencia}`;
-}
+// // Agregar un prototype
+// Tarea.prototype.mostrarInformacionTarea = function() {
+//      return `La tarea ${this.nombre} tiene una prioridad de ${this.urgencia}`;
+// }
 
 // Crear una nueva tareas
 // const tarea1 = new Tarea('Apreder JavaScript y React', 'Urgente');
@@ -163,8 +163,8 @@ Tarea.prototype.mostrarInformacionTarea = function() {
 // console.log(tarea1.nombre);
 
 // crear multiples tareas
-const tarea1 = new Tarea('Apreder JavaScript y React', 'Urgente');
-console.log(tarea1.mostrarInformacionTarea() );
+// const tarea1 = new Tarea('Apreder JavaScript y React', 'Urgente');
+// console.log(tarea1.mostrarInformacionTarea() );
 // const tarea2 = new Tarea('Preparar café', 'Urgente');
 // const tarea3 = new Tarea('Comer', 'Urgente');
 // const tarea4 = new Tarea('estudiar', 'Urgente');
@@ -172,3 +172,30 @@ console.log(tarea1.mostrarInformacionTarea() );
 // const mostrarInfo = mostrarInformacionTarea(tarea1.nombre, tarea1.urgencia);
 // console.log(mostrarInfo);
 
+// Destructuring de objetos
+
+const aprendiendoJS = {
+     version: {
+          nueva: 'ES6',
+          anterior: 'ES5'
+     },
+     frameworks: ['React', 'VueJS', 'AngularJS']
+}
+
+// Destructuring es extraer valores de un objeto
+
+console.log(aprendiendoJS);
+
+// version anterior
+// let version = aprendiendoJS.version;
+
+// console.log(version);
+
+// version anterior
+// let version = aprendiendoJS.version.nueva;
+// let framework = aprendiendoJS.frameworks[1];
+
+// Destructuring forma nueva
+let {nueva} = aprendiendoJS.version;
+console.log(nueva);
+// console.log(frameworks);

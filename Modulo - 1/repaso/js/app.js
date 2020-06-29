@@ -110,13 +110,29 @@
 //      return `Viajando a la ciudad de: ${destino}`;
 // }
 
-let viajando = (destino, duracion) => {
-     return `Viajando a la ciudad de: ${destino} por ${duracion}`;
-}
+// let viajando = (destino, duracion) => {
+//      return `Viajando a la ciudad de: ${destino} por ${duracion}`;
+// }
 
-let viaje 
-viaje = viajando('Paris');
-viaje = viajando('Barcelona');
-viaje = viajando('Lisboa', '9 dias');
+// let viaje 
+// viaje = viajando('Paris');
+// viaje = viajando('Barcelona');
+// viaje = viajando('Lisboa', '9 dias');
 
-console.log(viaje);
+// console.log(viaje);
+
+// Objetos
+
+// Object Literal
+
+const persona = {
+     nombre: 'Eraldo',
+     profesion: 'Desarrollador Web',
+     edad: 500
+} 
+
+console.log(persona);
+console.log(persona.nombre);
+console.log(persona.profesion);
+console.log(persona.edad);
+console.log(persona['edad']);

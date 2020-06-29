@@ -96,11 +96,27 @@
 //      console.log(`La persona ${nombre}, esta realizando la actividad ${actividad}`);
 // }
 
-const actividad = function(nombre = 'Walter White', actividad = 'Enseñar Quimica') {
-     console.log(`La persona ${nombre}, esta realizando la actividad ${actividad}`);
-};
+// const actividad = function(nombre = 'Walter White', actividad = 'Enseñar Quimica') {
+//      console.log(`La persona ${nombre}, esta realizando la actividad ${actividad}`);
+// };
 
-actividad('Eraldo', 'Aprender JavaScript');
-actividad('Gabriel cabecao', 'Creando un sito web');
-actividad();
+// actividad('Eraldo', 'Aprender JavaScript');
+// actividad('Gabriel cabecao', 'Creando un sito web');
+// actividad();
 
+// Arrow Functions
+
+// let viajando = function(destino) {
+//      return `Viajando a la ciudad de: ${destino}`;
+// }
+
+let viajando = (destino, duracion) => {
+     return `Viajando a la ciudad de: ${destino} por ${duracion}`;
+}
+
+let viaje 
+viaje = viajando('Paris');
+viaje = viajando('Barcelona');
+viaje = viajando('Lisboa', '9 dias');
+
+console.log(viaje);

@@ -202,9 +202,9 @@
 
 // Object literal enhancement
 
-const banda = 'Metallica';
-const genero = 'Heavy Metal';
-const canciones = ['Master Of Puppets', 'Seek & Destroy', 'Enter Sandman'];
+// const banda = 'Metallica';
+// const genero = 'Heavy Metal';
+// const canciones = ['Master Of Puppets', 'Seek & Destroy', 'Enter Sandman'];
 
 // forma anterior
 // const metallica = {
@@ -214,6 +214,20 @@ const canciones = ['Master Of Puppets', 'Seek & Destroy', 'Enter Sandman'];
 // }
 
 // forma nueva
-const metallica = {banda, genero, canciones};
+// const metallica = {banda, genero, canciones};
 
-console.log(metallica);
+// console.log(metallica);
+
+// métodos o funciones en un objeto
+
+const persona = {
+     nombre: 'Eraldo',
+     trabajo: 'Desarrollador Web',
+     edad: 500,
+     musicaRock: true,
+     mostrarInformacion() {
+          console.log(`${this.nombre} es ${this.trabajo} y su edad es ${this.edad}`);
+     }
+}
+
+persona.mostrarInformacion();

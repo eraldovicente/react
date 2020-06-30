@@ -355,54 +355,79 @@
 
 // Promise con Ajax
 
-const descargarUsuarios = cantidad => new Promise((resolve, reject) => {
-     // pasar la cantidad a la api
-     const api =  `https://randomuser.me/api/?results=${cantidad}&nat=us`;
+// const descargarUsuarios = cantidad => new Promise((resolve, reject) => {
+//      // pasar la cantidad a la api
+//      const api =  `https://randomuser.me/api/?results=${cantidad}&nat=us`;
 
-     // llamado a ajax
-     const xhr = new XMLHttpRequest();
+//      // llamado a ajax
+//      const xhr = new XMLHttpRequest();
 
-     // abrir la conexion
-     xhr.open('GET', api, true);
+//      // abrir la conexion
+//      xhr.open('GET', api, true);
 
-     // on load
-     xhr.onload = () => {
-          if (xhr.status === 200) {
-               resolve(JSON.parse(xhr.responseText).results);
-          } else {
-               reject(Error(xhr.statusText));
-          }
+//      // on load
+//      xhr.onload = () => {
+//           if (xhr.status === 200) {
+//                resolve(JSON.parse(xhr.responseText).results);
+//           } else {
+//                reject(Error(xhr.statusText));
+//           }
+//      }
+
+//      // opcional (on error)
+//      xhr.oneror = (error) => reject(error);
+
+//      // send
+//      xhr.send();
+
+// });
+
+// descargarUsuarios(10)
+//      .then(
+//           miembros => imprimirHTML(miembros),
+//           error => console.error(
+//                new Error('Hubo un error' + error)
+//           )
+//      );
+
+// function imprimirHTML(usuarios) {
+//      let html = '';
+//      usuarios.forEach(usuario => {
+//           html += `
+//                <li>
+//                     Nombre: ${usuario.name.first} ${usuario.name.last}
+//                     País: ${usuario.nat}
+//                     Imagen:
+//                          <img src="${usuario.picture.medium}">
+//                </li>          
+//           `;
+//      });
+
+//      const contenedorApp = document.querySelector('#app');
+//      contenedorApp.innerHTML = html;
+// }
+
+// Escribir classes
+
+class Tarea {
+     constructor(nombre, prioridad) {
+          this.nombre = nombre;
+          this.prioridad = prioridad;
+     }
+     mostrar() {
+          return `${this.nombre} tiene una prioridad de ${this.prioridad}`;
      }
 
-     // opcional (on error)
-     xhr.oneror = (error) => reject(error);
-
-     // send
-     xhr.send();
-
-});
-
-descargarUsuarios(10)
-     .then(
-          miembros => imprimirHTML(miembros),
-          error => console.error(
-               new Error('Hubo un error' + error)
-          )
-     );
-
-function imprimirHTML(usuarios) {
-     let html = '';
-     usuarios.forEach(usuario => {
-          html += `
-               <li>
-                    Nombre: ${usuario.name.first} ${usuario.name.last}
-                    País: ${usuario.nat}
-                    Imagen:
-                         <img src="${usuario.picture.medium}">
-               </li>          
-          `;
-     });
-
-     const contenedorApp = document.querySelector('#app');
-     contenedorApp.innerHTML = html;
 }
+
+// crear los objetos
+let tarea1 = new Tarea('Aprender JavaScript', 'Alta');
+let tarea2 = new Tarea('Aprender OO', 'Alta');
+let tarea3 = new Tarea('Aprender Desing Patterns', 'Alta');
+let tarea4 = new Tarea('Aprender Estrutura de datos y algoritmos', 'Alta');
+
+
+console.log(tarea1.mostrar());
+console.log(tarea2.mostrar());
+console.log(tarea3.mostrar());
+console.log(tarea4.mostrar());

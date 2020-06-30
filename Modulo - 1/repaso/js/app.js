@@ -453,6 +453,10 @@
 
 // console.log(nombreTarea);
 
-import HOLA from './tareas.js';
+import {nombreTarea, crearTarea} from './tareas.js';
 
-console.log(HOLA);
+console.log(nombreTarea);
+
+
+const tarea1 = crearTarea('Passear al perro', 'Media');
+console.log(tarea1);

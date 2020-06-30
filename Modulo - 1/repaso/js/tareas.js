@@ -1,14 +1,19 @@
 
-// export const nombreTarea = 'Pasear al perro';
+export const nombreTarea = 'Pasear al perro';
 
-const nombreTarea = 'Pasear al perro';
-const tarea = 'tarea';
+// const nombreTarea = 'Pasear al perro';
+// const tarea = 'tarea';
 
-export default {
-     nombre: nombreTarea,
-     tarea: tarea
+// export default {
+//      nombre: nombreTarea,
+//      tarea: tarea
+// }
+
+// Exportar una funcion
+
+export const crearTarea = (tarea, urgencia) => {
+     return `La tarea ${tarea} tiene una urgencia de ${urgencia}`;
 }
-
 
 
 

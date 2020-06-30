@@ -291,42 +291,64 @@
 
 // suma(...numeros);
 
-const personas = [
-     {nombre: 'Eraldo', edad: 230, aprendiendo: 'JavaScript'},
-     {nombre: 'Cabecao', edad: 212, aprendiendo: 'PHP'},
-     {nombre: 'Mainha', edad: 233, aprendiendo: 'HTML'},
-     {nombre: 'Babi', edad: 234, aprendiendo: 'CSS'},
-     {nombre: 'Duca', edad: 236, aprendiendo: 'React'},
-];
+// const personas = [
+//      {nombre: 'Eraldo', edad: 230, aprendiendo: 'JavaScript'},
+//      {nombre: 'Cabecao', edad: 212, aprendiendo: 'PHP'},
+//      {nombre: 'Mainha', edad: 233, aprendiendo: 'HTML'},
+//      {nombre: 'Babi', edad: 234, aprendiendo: 'CSS'},
+//      {nombre: 'Duca', edad: 236, aprendiendo: 'React'},
+// ];
 
 
-console.log(personas);
+// console.log(personas);
 
-// maior de 230
+// // maior de 230
 
-personas.filter(persona => {
-     console.log(persona);
+// personas.filter(persona => {
+//      console.log(persona);
+// });
+
+// const mayores = personas.filter(persona => {
+//      return persona.edad > 230;
+// });
+
+// console.log(mayores);
+
+// // que aprende cabeção y su edad
+// const cabecao = personas.find(persona => {
+//      return persona.nombre === 'Cabecao';
+// }); 
+
+// console.log(cabecao);
+
+// // Total das idades
+
+// let total = personas.reduce((edadTotal, persona) => {
+//      return edadTotal + persona.edad; 
+// }, 0);
+
+// console.log(total);
+
+// console.log(total / personas.length );
+
+// Promises
+
+const aplicarDescuento = new Promise((resolve, reject) => {
+     setTimeout( () => {
+          let descuento = false;
+
+          if (descuento) {
+               resolve('Descuento aplicado!');
+          } else {
+               reject('No se pudo aplicar el descuento');
+          }
+     }, 3000);
 });
 
-const mayores = personas.filter(persona => {
-     return persona.edad > 230;
-});
+// console.log(aplicarDescuento);
 
-console.log(mayores);
-
-// que aprende cabeção y su edad
-const cabecao = personas.find(persona => {
-     return persona.nombre === 'Cabecao';
-}); 
-
-console.log(cabecao);
-
-// Total das idades
-
-let total = personas.reduce((edadTotal, persona) => {
-     return edadTotal + persona.edad; 
-}, 0);
-
-console.log(total);
-
-console.log(total / personas.length );
+aplicarDescuento.then(resultado => {
+     console.log(resultado);
+}).catch(error => {
+     console.log(error);
+})

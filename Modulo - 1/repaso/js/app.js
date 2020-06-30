@@ -453,10 +453,20 @@
 
 // console.log(nombreTarea);
 
-import {nombreTarea, crearTarea} from './tareas.js';
+// import {nombreTarea, crearTarea} from './tareas.js';
 
-console.log(nombreTarea);
+// console.log(nombreTarea);
 
 
-const tarea1 = crearTarea('Passear al perro', 'Media');
+// const tarea1 = crearTarea('Passear al perro', 'Media');
+// console.log(tarea1);
+
+// importando classes
+
+import Tarea from './tareas.js';
+
+const tarea1 = new Tarea('Aprender JavaScript', 'Urgente');
+
 console.log(tarea1);
+
+tarea1.mostrar();

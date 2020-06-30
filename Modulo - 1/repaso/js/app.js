@@ -234,7 +234,7 @@
 
 // Arreglos y .map
 
-carrito = ['Producto 1', 'Producto 2', 'Producto 3'];
+// carrito = ['Producto 1', 'Producto 2', 'Producto 3'];
 
 // console.log(carrito);
 
@@ -248,26 +248,26 @@ carrito = ['Producto 1', 'Producto 2', 'Producto 3'];
 
 // appContenedor.innerHTML = html;
 
-carrito.map(producto => 'El producto es ' + producto );
+// carrito.map(producto => 'El producto es ' + producto );
 
 
-const persona = {
-     nombre: 'Eraldo',
-     profesion: 'Desarrollador web',
-     edad: 500
-}
+// const persona = {
+//      nombre: 'Eraldo',
+//      profesion: 'Desarrollador web',
+//      edad: 500
+// }
 
 // console.log(persona);
-const {nombre} = persona;
-console.log(nombre);
+// const {nombre} = persona;
+// console.log(nombre);
 
-console.log(Object.keys(persona));
+// console.log(Object.keys(persona));
 
 
 // Sprear operator
 
-let lenguajes = ['JavaScript', 'PHP', 'Python'];
-let frameworks = ['ReactJS', 'Laravel', 'Django'];
+// let lenguajes = ['JavaScript', 'PHP', 'Python'];
+// let frameworks = ['ReactJS', 'Laravel', 'Django'];
 
 // unir los arreglosen 1 solo
 
@@ -277,16 +277,56 @@ let frameworks = ['ReactJS', 'Laravel', 'Django'];
 
 // console.log(nuevoArreglo);
 
-let [ultimo] = [...lenguajes].reverse();
+// let [ultimo] = [...lenguajes].reverse();
 
-console.log(lenguajes);
-console.log(ultimo);
+// console.log(lenguajes);
+// console.log(ultimo);
 
 
-function suma(a, b, c) {
-     console.log(a+b+c);
-}
+// function suma(a, b, c) {
+//      console.log(a+b+c);
+// }
 
-const numeros = [1,2,3];
+// const numeros = [1,2,3];
 
-suma(...numeros);
+// suma(...numeros);
+
+const personas = [
+     {nombre: 'Eraldo', edad: 230, aprendiendo: 'JavaScript'},
+     {nombre: 'Cabecao', edad: 212, aprendiendo: 'PHP'},
+     {nombre: 'Mainha', edad: 233, aprendiendo: 'HTML'},
+     {nombre: 'Babi', edad: 234, aprendiendo: 'CSS'},
+     {nombre: 'Duca', edad: 236, aprendiendo: 'React'},
+];
+
+
+console.log(personas);
+
+// maior de 230
+
+personas.filter(persona => {
+     console.log(persona);
+});
+
+const mayores = personas.filter(persona => {
+     return persona.edad > 230;
+});
+
+console.log(mayores);
+
+// que aprende cabeção y su edad
+const cabecao = personas.find(persona => {
+     return persona.nombre === 'Cabecao';
+}); 
+
+console.log(cabecao);
+
+// Total das idades
+
+let total = personas.reduce((edadTotal, persona) => {
+     return edadTotal + persona.edad; 
+}, 0);
+
+console.log(total);
+
+console.log(total / personas.length );

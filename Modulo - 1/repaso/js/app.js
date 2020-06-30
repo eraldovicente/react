@@ -220,14 +220,45 @@
 
 // métodos o funciones en un objeto
 
+// const persona = {
+//      nombre: 'Eraldo',
+     // trabajo: 'Desarrollador Web',
+     // edad: 500,
+     // musicaRock: true,
+     // mostrarInformacion() {
+     //      console.log(`${this.nombre} es ${this.trabajo} y su edad es ${this.edad}`);
+//      }
+// }
+
+// persona.mostrarInformacion();
+
+// Arreglos y .map
+
+carrito = ['Producto 1', 'Producto 2', 'Producto 3'];
+
+// console.log(carrito);
+
+// const appContenedor = document.querySelector('#app');
+// appContenedor.innerHTML = carrito;
+
+// let html = '';
+// carrito.forEach(producto => {
+//      html += `<li>${producto}</li>`;
+// });
+
+// appContenedor.innerHTML = html;
+
+carrito.map(producto => 'El producto es ' + producto );
+
+
 const persona = {
      nombre: 'Eraldo',
-     trabajo: 'Desarrollador Web',
-     edad: 500,
-     musicaRock: true,
-     mostrarInformacion() {
-          console.log(`${this.nombre} es ${this.trabajo} y su edad es ${this.edad}`);
-     }
+     profesion: 'Desarrollador web',
+     edad: 500
 }
 
-persona.mostrarInformacion();
+// console.log(persona);
+const {nombre} = persona;
+console.log(nombre);
+
+console.log(Object.keys(persona));

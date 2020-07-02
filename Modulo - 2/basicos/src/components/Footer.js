@@ -1,9 +1,10 @@
-import React from 'react'; 
+import React from 'react';
 
-const Footer = () => ( 
-          <Footer>
-               <p>Todos los derechos reservados &copy;</p>
-          </Footer>
-      );
+const Footer = ({fecha}) => ( 
+          <footer>
+               <p>Todos los derechos reservados &copy; {fecha}</p>
+          </footer>
+     );
+
  
 export default Footer;

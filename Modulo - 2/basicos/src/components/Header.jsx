@@ -16,7 +16,7 @@ function Header({titulo}) {
      return (
           <>
                <h1>{mensaje}</h1>
-               <h2 id="encabezado" className="encabezado">{titulo}</h2>
+               <h1 id="encabezado" className="encabezado">{titulo}</h1>
           </>
      );
 }

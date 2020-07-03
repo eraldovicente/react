@@ -5,8 +5,12 @@ const Producto = ({producto, carrito, agregarProducto, productos}) => {
      // Agregar producto al carrito
      const seleccionarProducto = id => {
           // console.log('Comprando... ', id);
-          const producto = productos.filter(producto => producto.id === id )[0];
-          console.log(producto);
+          const producto = productos.filter(producto => producto.id === id );
+          // const producto = productos.filter(producto => producto.id === id )[0];
+          agregarProducto([
+               ...carrito,
+               ...producto
+          ]);
      }
 
      const { nombre, precio, id } = producto;

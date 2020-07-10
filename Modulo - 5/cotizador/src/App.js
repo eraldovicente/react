@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
+import Formulario from './components/Formulario';
 
 import styled from '@emotion/styled'; 
 
@@ -19,11 +20,12 @@ function App() {
       <Header 
         titulo='Cotizador de Seguros'
       />
-    </Contenedor>
+    
 
-    <ContenedorFormulario>
-      
-    </ContenedorFormulario>
+      <ContenedorFormulario>
+        <Formulario />
+      </ContenedorFormulario>
+    </Contenedor>
   );
 }
 

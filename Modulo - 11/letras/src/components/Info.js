@@ -10,7 +10,7 @@ const Info = ({info}) => {
           <div className="card border-light">
                <div className="card-header bg-primary text-light font-weight-bold">
                     Información Artista
-               </div>
+               </div> 
                <div className="card-body">
                     <img src={strArtistThumb} alt="Logo Artist" />
                     <p className="card-text">Género: {strGenre}</p>

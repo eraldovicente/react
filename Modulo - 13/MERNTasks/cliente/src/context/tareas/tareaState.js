@@ -21,8 +21,9 @@ const TareaState = props => {
                { nombre: 'Elegir plataformas de Pago', estado: false, proyectoId: 2 },       
                { nombre: 'Elegir Plataforma', estado: true, proyectoId: 3 },
                { nombre: 'Elegir Colores', estado: false, proyectoId: 4 },
-               { nombre: 'Elegir plataformas de Pago', estado: false, proyectoId: 3 },   
-          ]
+               { nombre: 'Elegir plataformas de Pago', estado: false, proyectoId: 3 }   
+          ],
+          tareasproyecto: null
      }
 
      // Crear dispach y state
@@ -42,6 +43,7 @@ const TareaState = props => {
           <TareaContext.Provider
                value={{
                     tareas: state.tareas,
+                    tareasproyecto : state.tareasproyecto,
                     obtenerTareas
                }}
           >

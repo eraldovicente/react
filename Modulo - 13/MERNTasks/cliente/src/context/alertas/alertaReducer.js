@@ -4,7 +4,7 @@ export default (state, action) => {
      switch(action.type) {
           case MOSTRAR_ALERTA:
                return {
-                    aleta: action.payload
+                    alerta: action.payload
                }
           case OCULTAR_ALERTA:
                return {

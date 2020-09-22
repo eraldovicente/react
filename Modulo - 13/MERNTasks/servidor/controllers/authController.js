@@ -3,7 +3,7 @@ const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const jwt = require('jsonwebtoken');
 
-exports.autenticarUsuario = async (req, res) => {
+exports.autenticarUsuarios = async (req, res) => {
      // revisar si hay errores
      const errores = validationResult(req);
      if ( !errores.isEmpty() ) {
@@ -52,7 +52,7 @@ exports.autenticarUsuario = async (req, res) => {
 // Obtiene que usuario esta autenticado
 exports.usuarioAutenticado = async (req, res) => {
      try {
-          const usuario = await Usuario.findById(req.usuario.id);
+          const usuario = await Usuario.findById(req.usuario.id).select('-password');
           res.json({usuario});
      } catch (error) {
           console.log(error);

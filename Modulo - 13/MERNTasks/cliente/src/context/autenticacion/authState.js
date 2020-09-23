@@ -82,7 +82,7 @@ const AuthState = props => {
                     type: LOGIN_EXITOSO,
                     payload: respuesta.data
                });
-               
+
                // Obtener el usuario
                usuarioAutenticado();
           } catch (error) {
@@ -107,7 +107,8 @@ const AuthState = props => {
                     usuario: state.usuario,
                     mensaje: state.mensaje,
                     registrarUsuario,
-                    iniciarSesion
+                    iniciarSesion,
+                    usuarioAutenticado
                }}
           >
                {props.children}
